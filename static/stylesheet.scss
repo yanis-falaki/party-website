@@ -3,19 +3,30 @@
     src: url(fonts/aAbsoluteEmpire.ttf);
 }
 
-h1 {
+body {
     font-family: empire;
     color: white;
+}
+
+h1 {
     font-size: 4rem;
 }
 
+h2 {
+    font-size: 3rem;
+}
+
 p {
-    font-family: empire;
+    font-size: 1.25rem;
+}
+
+ul {
+    font-size: 1.25rem;
 }
 
 .masthead {
     background-size: cover;
-    min-height: 50vh;
+    min-height: 100vh;
     position: relative;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .2)
 }
@@ -27,11 +38,18 @@ p {
     background-color: rgba(0, 0, 0, .4)
 }
 
-@media (max-width: 768px) {
-    .masthead {
-        min-height: 30vh;
-    }
+/*@media (max-width: 768px) {
+    //.masthead {
+    //    min-height: 30vh;
+    //}
     h1 {
         font-size: calc(1.525rem + 3.3vw);
     }
-}
+    h2 {
+        font-size: calc(1.4rem + 3vw);
+    }
+    
+    p {
+        font-size: calc(0.4rem + 2.5vw);
+    }
+}*/
