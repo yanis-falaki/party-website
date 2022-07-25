@@ -32,20 +32,4 @@ ul {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.4); }
 
-/*@media (max-width: 768px) {
-    //.masthead {
-    //    min-height: 30vh;
-    //}
-    h1 {
-        font-size: calc(1.525rem + 3.3vw);
-    }
-    h2 {
-        font-size: calc(1.4rem + 3vw);
-    }
-    
-    p {
-        font-size: calc(0.4rem + 2.5vw);
-    }
-}*/
-
 /*# sourceMappingURL=stylesheet.css.map */
