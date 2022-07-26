@@ -3,10 +3,12 @@
 {% block title %}Home{% endblock %}
 
 {% block main %}
+    <script src="https://js.stripe.com/v3"></script>
+
     <main class="container-fluid color-overlay">
         <h1 class="text-center mt-5">MTL PARTY</h1>
         <div class="d-flex justify-content-center">
-            <button type="button" class="btn btn-lg btn-primary mx-auto" style="height: 60px">Reserve your spot now!</button>
+            <button type="button" class="btn btn-lg btn-primary mx-auto" style="height: 60px" onclick="checkout()">Reserve your spot now!</button>
         </div>
         <div class="row mt-5">
             <div class="col-lg-6 px-5">
@@ -31,11 +33,30 @@
             </div>
             <div class="col-12 px-5 d-flex flex-column mt-3">
                 <p class="mx-auto">35$ entrance fee</p>
-                <button type="button" class="btn btn-primary btn-lg mb-5 mx-auto" style="height: 75px">Reserve your spot now!</button>
+                <button type="button" class="btn btn-primary btn-lg mb-5 mx-auto" style="height: 75px" onclick="checkout()">Reserve your spot now!</button>
             </div>
         </div>
     </main>
 
+    <script>
+        let stripe = Stripe(
+            "pk_test_51LPgouJ8BYb1YYE12XSl29W80bJ02NmhXiq5Gej7RXOoeitcokuhXGVQIZQfwQcqmDfXlsmUWtElQIz5NewEGw5L00mmotdfuK"
+        )
 
-
+        function checkout(){
+            stripe.redirectToCheckout({
+                lineItems: [
+                    {
+                        price: "price_1LPil9J8BYb1YYE1FKqpsYep",
+                        quantity: 1,
+                    },  
+                ],
+                mode: "payment",
+                successUrl: "https://youtube.com",
+                cancelUrl: "https://twitter.com"
+            }).then(function(result) {
+                alert(result);
+            });
+        }
+    </script>
 {% endblock %}
