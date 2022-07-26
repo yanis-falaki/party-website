@@ -1,0 +1,59 @@
+@font-face {
+  font-family: empire;
+  src: url(../fonts/aAbsoluteEmpire.ttf);
+}
+body {
+  font-family: empire;
+  color: white;
+  display: flow-root;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+ul {
+  font-size: 1.25rem;
+}
+
+.masthead {
+  min-height: 100vh;
+  position: relative;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.color-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.img {
+  background-image: url("../media/purple_lights.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+.content {
+  position: absolute;
+  left: 50%;
+  margin-top: 5rem;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
