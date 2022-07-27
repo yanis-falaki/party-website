@@ -3,8 +3,6 @@
 {% block title %}Home{% endblock %}
 
 {% block main %}
-    <script src="https://js.stripe.com/v3"></script>
-
     <main class="container-fluid color-overlay">
         <h1 class="text-center mt-5">MTL PARTY</h1>
         <div class="d-flex justify-content-center">
@@ -35,30 +33,14 @@
                 <p class="mx-auto">$30 entrance fee</p>
                 <button type="button" class="btn btn-primary btn-lg mb-5 mx-auto" style="height: 75px" onclick="checkout()">Reserve your spot now!</button>
                 <p class="mx-auto mt-5">contact us at:</p>
-                <p class="mx-auto">contact@mtlparty.com</p>
+                <p class="mx-auto">contact@mtlparty.info</p>
             </div>
         </div>
     </main>
 
     <script>
-        let stripe = Stripe(
-            "pk_test_51LPgouJ8BYb1YYE12XSl29W80bJ02NmhXiq5Gej7RXOoeitcokuhXGVQIZQfwQcqmDfXlsmUWtElQIz5NewEGw5L00mmotdfuK"
-        )
-
         function checkout(){
-            stripe.redirectToCheckout({
-                lineItems: [
-                    {
-                        price: "price_1LPil9J8BYb1YYE1FKqpsYep",
-                        quantity: 1,
-                    },  
-                ],
-                mode: "payment",
-                successUrl: "https://youtube.com",
-                cancelUrl: "https://mtlparty.info"
-            }).then(function(result) {
-                alert(result);
-            });
+            document.location.href = "https://buy.stripe.com/test_eVadS66CP67Qc8M5kl";
         }
     </script>
 {% endblock %}
